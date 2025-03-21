@@ -4,60 +4,10 @@ description: "Step-by-step guide to setting up Algo.ai, the automated crypto tra
 author: @skelleng
 date: 2025-03-21
 tags:
-  [
-    Algo.ai,
-    crypto,
-    cryptocurrency,
-    crypto trading,
-    crypto trading bot,
-    automated trading,
-    crypto exchange,
-    Binance,
-    KuCoin,
-    Vybit,
-    USDT,
-    crypto wallet,
-    crypto mining,
-    crypto news,
-    crypto prices,
-    best crypto to buy now,
-    cryptocurrency exchange,
-  ]
+  [Algo.ai, crypto, cryptocurrency, crypto trading, crypto trading bot, automated trading, crypto exchange, Binance, KuCoin, Vybit, USDT, crypto wallet, crypto mining, crypto news, crypto prices, best crypto to buy now, cryptocurrency exchange]
+layout: post
+collection: build
 ---
-
-<!-- Meta Keywords (optional) -->
-<meta name="keywords" content="crypto trading, algo.ai, Binance bot, KuCoin auto trade, Telegram crypto bot, automated USDT trading, crypto bot setup, how to trade crypto automatically">
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Get Started with Algo.ai",
-  "description": "A step-by-step guide to signing up for the Algo.ai crypto trading bot using Telegram and linking Binance or KuCoin accounts.",
-  "image": "https://your-site.com/images/algoai-signup-cover.jpg",
-  "totalTime": "PT10M",
-  "tool": ["Telegram App", "Binance Account", "Algo.ai"],
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Open Telegram Bot",
-      "text": "Click the referral link and open the bot in Telegram.",
-      "url": "https://t.me/my_algoai_bot?start=pvk4IhYK_l"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Connect Your Exchange",
-      "text": "Follow instructions to input API keys from Binance, KuCoin, or Vybit."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Select Strategy",
-      "text": "Choose from scalping, grid, or AI swing trading."
-    }
-  ]
-}
-</script>
 
 # 🚀 Crypto Trading Bot Tutorial: How to Use Algo.ai with Binance or KuCoin
 
@@ -95,7 +45,7 @@ To begin using Algo.ai, make sure you have the following:
 
 - ✅ A **Binance**, **KuCoin**, or **Vybit** account
 - ✅ **$10,000 USDT** minimum in your wallet
-- ✅ **Telegram Messenger** app (📲 [Download here](https://telegram.org))
+- ✅ **Telegram Messenger** app ([Download here](https://telegram.org))
 
 ---
 
@@ -126,20 +76,20 @@ You’ll be prompted to choose Binance, KuCoin, or Vybit, and enter your API Key
 
 > 📸 _Image Placeholder: `algoai-step3-exchange-select.png`_  
 > `alt="Select Exchange in Algo.ai"`
->
+
 > 🔐 _Use trading-only permissions — **never enable withdrawals.**_
 
 ---
 
 ## 🔗 How to Connect Your Exchange Account
 
-**Example: Connecting Binance**
+### Example: Connecting Binance
 
-1. Log into Binance
-2. Go to `API Management`
-3. Click **Create API** → Name it "AlgoAI"
-4. Enable only **Trade** permission
-5. Copy the **API Key** and **Secret**
+1. Log into Binance  
+2. Go to `API Management`  
+3. Click **Create API** → Name it "AlgoAI"  
+4. Enable only **Trade** permission  
+5. Copy the **API Key** and **Secret**  
 6. Paste both into the Telegram bot
 
 > 📸 _Image Placeholder: `algoai-step4-binance-api.png`_  
