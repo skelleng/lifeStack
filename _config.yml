@@ -7,6 +7,35 @@ theme: jekyll-theme-minimal
 markdown: kramdown
 sass:
   style: compressed
+collections:
+  cook:
+    output: true
+    permalink: /cook/:name/
+  clean:
+    output: true
+    permalink: /clean/:name/
+  build:
+    output: true
+    permalink: /build/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: cook
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: clean
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: build
+    values:
+      layout: post
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
