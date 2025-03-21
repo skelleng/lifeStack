@@ -10,13 +10,13 @@ sass:
 collections:
   cook:
     output: true
-    permalink: /cook/:name/
+    permalink: /cook/:year/:month/:day/:title/
   clean:
     output: true
-    permalink: /clean/:name/
+    permalink: /clean/:year/:month/:day/:title/
   build:
     output: true
-    permalink: /build/:name/
+    permalink: /build/:year/:month/:day/:title/
 
 defaults:
   - scope:
@@ -34,6 +34,7 @@ defaults:
       type: build
     values:
       layout: post
+
 
 plugins:
   - jekyll-sitemap
