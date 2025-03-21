@@ -1,7 +1,7 @@
 ---
 title: "Crypto Trading Bot Tutorial: How to Use Algo.ai with Binance or KuCoin"
 description: "Step-by-step guide to setting up Algo.ai, the automated crypto trading bot that connects with Binance, KuCoin, or Vybit. Learn requirements, how to link your account, and start trading with USDT."
-author: @skelleng
+author: skelleng
 date: 2025-03-21
 tags:
   [Algo.ai, crypto, cryptocurrency, crypto trading, crypto trading bot, automated trading, crypto exchange, Binance, KuCoin, Vybit, USDT, crypto wallet, crypto mining, crypto news, crypto prices, best crypto to buy now, cryptocurrency exchange]
