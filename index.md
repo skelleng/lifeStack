@@ -35,7 +35,22 @@ permalink: /
 }
 </script>
 
-# 🧬 LifeStack
+<!-- Navigation -->
+<nav style="padding: 1rem 2rem; background: #f9f9f9; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif;">
+  <div style="font-weight: bold; font-size: 1.2rem;">
+    <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333;">LifeStack</a>
+  </div>
+  <div style="display: flex; gap: 1.5rem;">
+    <a href="{{ '/blog/' | relative_url }}" style="text-decoration: none; color: #555;">Blog</a>
+    <a href="{{ '/cook/' | relative_url }}" style="text-decoration: none; color: #555;">Cook</a>
+    <a href="{{ '/clean/' | relative_url }}" style="text-decoration: none; color: #555;">Clean</a>
+    <a href="{{ '/build/' | relative_url }}" style="text-decoration: none; color: #555;">Build</a>
+    <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: #555;">About</a>
+    <a href="{{ '/contact/' | relative_url }}" style="text-decoration: none; color: #555;">Contact</a>
+  </div>
+</nav>
+
+# 🧜️ LifeStack
 
 **A modular philosophy for intentional living.**
 
@@ -45,7 +60,7 @@ In a world where traditional roles are blurring and personal evolution is nonlin
 
 ---
 
-## 🧭 Explore the LifeStack Layers
+## 🧬 Explore the LifeStack Layers
 
 - 🍳 [Cook](./cook/) — Nourish the body and mind  
 - 🧼 [Clean](./clean/) — Achieve clarity and emotional balance  
