@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skelleng.github.io/lifeStack/sitemap.xml
