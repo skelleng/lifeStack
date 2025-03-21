@@ -1,0 +1,7 @@
+title: LifeStack
+description: A modular framework for intentional living: Cook, Clean, Build.
+author: skelleng
+theme: jekyll-theme-minimal
+baseurl: "/lifeStack"
+url: "https://skelleng.github.io"
+markdown: kramdown
