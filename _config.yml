@@ -5,6 +5,8 @@ url: "https://skelleng.github.io"
 baseurl: "/lifeStack"
 theme: jekyll-theme-minimal
 markdown: kramdown
+sass:
+  style: compressed
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
