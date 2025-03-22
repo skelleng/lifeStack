@@ -39,7 +39,47 @@ ul {
   padding-left: 1.25rem;
 }
 
-/* Dark Mode Styles */
+/* Sticky Nav */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Search Results */
+#searchResults {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 2rem;
+  z-index: 1001;
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #eee;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  display: none;
+  z-index: 1001;
+}
+
+/* 🌙 Dark Mode Styles */
 body.dark {
   background: #111;
   color: #f0f0f0;
@@ -48,8 +88,14 @@ body.dark a {
   color: #66ccff;
 }
 body.dark nav {
-  background: #222;
+  background-color: #222;
   border-color: #444;
+}
+body.dark nav a {
+  color: #ddd;
+}
+body.dark nav a:hover {
+  color: #66ccff;
 }
 body.dark footer {
   color: #aaa;
@@ -58,3 +104,6 @@ body.dark #backToTop {
   background: #333;
   color: #fff;
 }
+body.dark #searchBox {
+  background-color: #111;
+  color: #f0f
