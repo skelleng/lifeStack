@@ -1,126 +1,61 @@
-html {
-  scroll-behavior: smooth;
-}
+<nav style="width: 100%; padding: 1rem 2rem; min-height: 60px; box-sizing: border-box; background: #f9f9f9; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; position: sticky; top: 0; z-index: 1000;">
+  <div style="font-weight: bold; font-size: 1.2rem;">
+    <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333;">LifeStack</a>
+  </div>
 
-body {
-  font-family: Georgia, serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-  transition: background 0.3s ease, color 0.3s ease;
-}
+  <div style="display: flex; align-items: center; gap: 1.25rem; flex-grow: 1; justify-content: center;">
+    <a href="{{ '/cook/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/cook/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/cook/' %}bold{% else %}normal{% endif %};">Cook</a>
+    <a href="{{ '/clean/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/clean/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/clean/' %}bold{% else %}normal{% endif %};">Clean</a>
+    <a href="{{ '/build/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/build/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/build/' %}bold{% else %}normal{% endif %};">Build</a>
+  </div>
 
-main {
-  max-width: 720px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
+  <div style="display: flex; align-items: center; gap: 1rem;">
+    <input type="text" id="searchBox" placeholder="Search…" style="padding: 0.25rem 0.5rem; font-size: 14px; border: 1px solid #ccc; border-radius: 3px;">
+    <button onclick="toggleTheme()" id="themeToggle" style="border: none; background: none; color: #555; cursor: pointer;">🌓</button>
+    <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/about/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/about/' %}bold{% else %}normal{% endif %};">About</a>
+  </div>
+</nav>
 
-h1, h2, h3 {
-  font-family: Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #111;
-  margin-top: 2rem;
-}
+<!-- Search Results Dropdown -->
+<div id="searchResults" style="position: absolute; background: #fff; color: #000; font-size: 14px; padding: 0.5rem 1rem; display: none; border: 1px solid #ccc; border-radius: 4px; max-width: 300px; margin-left: auto; margin-right: 2rem; z-index: 1001;"></div>
 
-a {
-  color: #0077cc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  text-decoration: underline;
-}
+<script>
+  const toggleTheme = () => {
+    const body = document.body;
+    const isDark = body.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  };
 
-ul {
-  margin-top: 1rem;
-  padding-left: 1.25rem;
-}
-
-/* Sticky Nav */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #f9f9f9;
-  border-bottom: 1px solid #ddd;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-/* Search Results */
-#searchResults {
-  position: absolute;
-  background: #fff;
-  color: #000;
-  font-size: 14px;
-  padding: 0.5rem 1rem;
-  display: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: 2rem;
-  z-index: 1001;
-}
-
-/* Back to Top */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #eee;
-  padding: 0.5rem 0.75rem;
-  border-radius: 5px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #333;
-  display: none;
-  z-index: 1001;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* 🌙 Dark Mode */
-body.dark {
-  background: #111;
-  color: #f0f0f0;
-}
-body.dark a {
-  color: #66ccff;
-}
-body.dark nav {
-  background-color: #222;
-  border-color: #444;
-}
-body.dark nav a {
-  color: #ddd;
-}
-body.dark nav a:hover {
-  color: #66ccff;
-}
-body.dark footer {
-  color: #aaa;
-}
-body.dark #backToTop {
-  background: #333;
-  color: #fff;
-}
-body.dark #searchBox {
-  background-color: #111;
-  color: #f0f0f0;
-  border: 1px solid #555;
-}
-body.dark #themeToggle {
-  color: #ccc;
-}
-
-/* 🌗 Optional: start in dark mode if OS prefers it */
-@media (prefers-color-scheme: dark) {
-  body:not(.light):not(.dark) {
-    background: #111;
-    color: #f0f0f0;
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme) {
+    document.body.classList.add(storedTheme);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) document.body.classList.add('dark');
   }
-}
+
+  const searchBox = document.getElementById("searchBox");
+  const results = document.getElementById("searchResults");
+  let posts = [];
+
+  async function fetchPosts() {
+    const res = await fetch('{{ "/search.json" | relative_url }}');
+    posts = await res.json();
+  }
+
+  fetchPosts();
+
+  searchBox.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    if (query.length < 2) {
+      results.style.display = "none";
+      return;
+    }
+
+    const matches = posts.filter(post => post.title.toLowerCase().includes(query));
+    results.innerHTML = matches.map(post =>
+      `<div><a href="${post.url}" style="color:#0077cc;">${post.title}</a></div>`
+    ).join('');
+    results.style.display = matches.length ? "block" : "none";
+  });
+</script>
