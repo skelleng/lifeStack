@@ -4,6 +4,14 @@ title: LifeStack – A Modular Philosophy for Intentional Living
 permalink: /
 ---
 
+<nav style="padding: 1rem; background-color: #fff; font-family: sans-serif; font-size: 0.95rem; border-bottom: 1px solid #e0e0e0;">
+  <a href="{{ '/' | relative_url }}" style="margin-right: 1rem; text-decoration: none; color: #333;">Home</a>
+  <a href="{{ '/cook/' | relative_url }}" style="margin-right: 1rem; text-decoration: none; color: #333;">Cook</a>
+  <a href="{{ '/clean/' | relative_url }}" style="margin-right: 1rem; text-decoration: none; color: #333;">Clean</a>
+  <a href="{{ '/build/' | relative_url }}" style="margin-right: 1rem; text-decoration: none; color: #333;">Build</a>
+  <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: #333;">About</a>
+</nav>
+
 # 🧬 LifeStack – A Modular Philosophy for Intentional Living
 
 Welcome to LifeStack – a framework for intentional living built around three core layers:
