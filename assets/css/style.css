@@ -34,3 +34,7 @@ ul {
   margin-top: 1rem;
   padding-left: 1.25rem;
 }
+
+html {
+  scroll-behavior: smooth;
+}
