@@ -3,7 +3,7 @@ layout: default
 title: "LifeStack – A Modular Philosophy for Intentional Living"
 description: "Explore LifeStack: a holistic framework to nourish your body, clear your mind, and build systems that align with your values. Cook. Clean. Build."
 keywords: ["intentional living", "lifestyle design", "LifeStack", "cook clean build", "personal development", "financial fitness", "self-care", "emotional clarity", "digital minimalism", "modular living"]
-permalink: /
+permalink: /about/
 ---
 
 <!-- SEO Meta Tags -->
