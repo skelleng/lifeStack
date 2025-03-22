@@ -1,11 +1,23 @@
-<nav style="padding: 1rem 2rem; background: #f9f9f9; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif;">
+<nav style="padding: 1rem 2rem; background: #f9f9f9; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; position: sticky; top: 0; z-index: 1000;">
   <div style="font-weight: bold; font-size: 1.2rem;">
     <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333;">LifeStack</a>
   </div>
   <div style="display: flex; gap: 1.5rem;">
-    <a href="{{ '/cook/' | relative_url }}" style="text-decoration: none; color: #555;">Cook</a>
-    <a href="{{ '/clean/' | relative_url }}" style="text-decoration: none; color: #555;">Clean</a>
-    <a href="{{ '/build/' | relative_url }}" style="text-decoration: none; color: #555;">Build</a>
-    <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: #555;">About</a>
+    <a href="{{ '/cook/' | relative_url }}"
+       style="text-decoration: none; color: {% if page.url contains '/cook/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/cook/' %}bold{% else %}normal{% endif %};">
+      Cook
+    </a>
+    <a href="{{ '/clean/' | relative_url }}"
+       style="text-decoration: none; color: {% if page.url contains '/clean/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/clean/' %}bold{% else %}normal{% endif %};">
+      Clean
+    </a>
+    <a href="{{ '/build/' | relative_url }}"
+       style="text-decoration: none; color: {% if page.url contains '/build/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/build/' %}bold{% else %}normal{% endif %};">
+      Build
+    </a>
+    <a href="{{ '/about/' | relative_url }}"
+       style="text-decoration: none; color: {% if page.url contains '/about/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/about/' %}bold{% else %}normal{% endif %};">
+      About
+    </a>
   </div>
 </nav>
