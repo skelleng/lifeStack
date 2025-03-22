@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Georgia, serif;
   font-size: 18px;
@@ -35,28 +39,21 @@ ul {
   padding-left: 1.25rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Dark Mode Styles */
 body.dark {
   background: #111;
   color: #f0f0f0;
 }
-
 body.dark a {
   color: #66ccff;
 }
-
 body.dark nav {
   background: #222;
   border-color: #444;
 }
-
 body.dark footer {
   color: #aaa;
 }
-
 body.dark #backToTop {
   background: #333;
   color: #fff;
