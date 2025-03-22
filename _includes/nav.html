@@ -3,26 +3,13 @@
     <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333;">LifeStack</a>
   </div>
   <div style="display: flex; gap: 1.5rem;">
-    <a href="{{ '/cook/' | relative_url }}"
-       style="text-decoration: none; color: {% if page.url contains '/cook/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/cook/' %}bold{% else %}normal{% endif %};">
-      Cook
-    </a>
-    <a href="{{ '/clean/' | relative_url }}"
-       style="text-decoration: none; color: {% if page.url contains '/clean/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/clean/' %}bold{% else %}normal{% endif %};">
-      Clean
-    </a>
-    <a href="{{ '/build/' | relative_url }}"
-       style="text-decoration: none; color: {% if page.url contains '/build/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/build/' %}bold{% else %}normal{% endif %};">
-      Build
-    </a>
-    <a href="{{ '/about/' | relative_url }}"
-       style="text-decoration: none; color: {% if page.url contains '/about/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/about/' %}bold{% else %}normal{% endif %};">
-      About
-    </a>
+    <a href="{{ '/cook/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/cook/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/cook/' %}bold{% else %}normal{% endif %};">Cook</a>
+    <a href="{{ '/clean/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/clean/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/clean/' %}bold{% else %}normal{% endif %};">Clean</a>
+    <a href="{{ '/build/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/build/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/build/' %}bold{% else %}normal{% endif %};">Build</a>
+    <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/about/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/about/' %}bold{% else %}normal{% endif %};">About</a>
+    <button onclick="toggleTheme()" id="themeToggle" style="border: none; background: none; color: #555; cursor: pointer;">🌓</button>
   </div>
-  <button onclick="toggleTheme()" id="themeToggle" style="border: none; background: none; color: #555; cursor: pointer;">
-  🌓
-</button>
+</nav>
 
 <script>
   const toggleTheme = () => {
@@ -33,4 +20,3 @@
     document.body.classList.add('dark');
   }
 </script>
-</nav>
