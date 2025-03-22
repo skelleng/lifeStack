@@ -38,3 +38,26 @@ ul {
 html {
   scroll-behavior: smooth;
 }
+
+body.dark {
+  background: #111;
+  color: #f0f0f0;
+}
+
+body.dark a {
+  color: #66ccff;
+}
+
+body.dark nav {
+  background: #222;
+  border-color: #444;
+}
+
+body.dark footer {
+  color: #aaa;
+}
+
+body.dark #backToTop {
+  background: #333;
+  color: #fff;
+}
