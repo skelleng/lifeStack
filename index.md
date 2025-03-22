@@ -4,8 +4,6 @@ title: LifeStack – A Modular Philosophy for Intentional Living
 permalink: /
 ---
 
-{% include nav.html %}
-
 {% include homepage-intro.html %}
 
 ---
