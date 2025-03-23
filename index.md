@@ -3,9 +3,7 @@ layout: default
 title: LifeStack – A Modular Philosophy for Intentional Living
 permalink: /
 ---
-
 {% include homepage-intro.html %}
-
 ---
 
 ## 📝 All Posts
