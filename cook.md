@@ -3,7 +3,6 @@ layout: default
 title: Cook
 permalink: /cook/
 ---
-
 # 🍳 Cook – Nourish the Body and Mind
 
 ## Overview
