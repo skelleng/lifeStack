@@ -3,13 +3,13 @@
     <a href="{{ '/' | relative_url }}" class="logo">LifeStack</a>
   </div>
 
-  <div class="nav-center">
-    <a href="{{ '/health/' | relative_url }}" class="nav-link {% if page.url contains '/health/' %}active{% endif %}">Health</a>
-    <a href="{{ '/wealth/' | relative_url }}" class="nav-link {% if page.url contains '/wealth/' %}active{% endif %}">Wealth</a>
-    <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about/' %}active{% endif %}">About</a>
-  </div>
-
   <div class="nav-right">
+    <div class="nav-links">
+      <a href="{{ '/health/' | relative_url }}" class="nav-link {% if page.url contains '/health/' %}active{% endif %}">Health</a>
+      <a href="{{ '/wealth/' | relative_url }}" class="nav-link {% if page.url contains '/wealth/' %}active{% endif %}">Wealth</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about/' %}active{% endif %}">About</a>
+    </div>
+
     <input type="text" id="searchBox" placeholder="Search…">
     <button onclick="toggleTheme()" id="themeToggle" title="Toggle theme">🌓</button>
   </div>
