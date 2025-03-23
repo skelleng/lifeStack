@@ -149,21 +149,3 @@ We believe in community-driven content and collective growth. You can:
 By aligning your daily habits, emotional clarity, and creative output, you can build a life that is not only functional, but **fulfilling, grounded, and impactful**.
 
 Whether you're nourishing your body, clearing mental fog, or designing your future—LifeStack helps you **stack your life with meaning**.
-
-<!-- Giscus Comment Integration -->
-<div id="giscus_thread"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="skelleng/lifeStack"
-        data-repo-id="YOUR_REPO_ID"
-        data-category="General"
-        data-category-id="YOUR_CATEGORY_ID"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
