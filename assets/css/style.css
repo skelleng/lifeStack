@@ -1,4 +1,4 @@
-/* Reset & Base Fixes */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,61 +7,58 @@
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  font-family: sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Georgia, serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-main {
-  max-width: 720px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
-
-h1, h2, h3 {
-  font-family: Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #111;
-  margin-top: 2rem;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  margin-top: 1rem;
-  padding-left: 1.25rem;
-}
-
-/* Sticky Nav */
-nav {
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  min-height: 60px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #f9f9f9;
-  border-bottom: 1px solid #ddd;
-  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-center {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+}
+
+.navbar a.active {
+  color: black;
+  font-weight: bold;
+}
+
+#searchBox {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
 }
 
 /* Search Results */
@@ -80,140 +77,32 @@ nav {
   z-index: 1001;
 }
 
-/* Back to Top */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #eee;
-  padding: 0.5rem 0.75rem;
-  border-radius: 5px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #333;
-  display: none;
-  z-index: 1001;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* 🌙 Dark Mode */
-body.dark {
-  background: #111;
-  color: #f0f0f0;
-}
-body.dark a {
-  color: #66ccff;
-}
-body.dark nav {
-  background-color: #222;
+/* Dark Mode */
+body.dark .navbar {
+  background-color: #1a1a1a;
   border-color: #444;
 }
-body.dark nav a {
-  color: #ddd;
+
+body.dark .navbar a {
+  color: #ccc;
 }
-body.dark nav a:hover {
+
+body.dark .navbar a:hover {
   color: #66ccff;
 }
-body.dark footer {
-  color: #aaa;
-}
-body.dark #backToTop {
-  background: #333;
-  color: #fff;
-}
+
 body.dark #searchBox {
   background-color: #111;
   color: #f0f0f0;
   border: 1px solid #555;
 }
+
 body.dark #themeToggle {
   color: #ccc;
 }
-.post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.post-card {
-  padding: 1.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background: #fff;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.post-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  border-color: #ccc;
-}
-
-.post-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-  color: #222;
-}
-
-.post-card .excerpt {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.meta {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #999;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.tags {
-  margin-top: 0.5rem;
-}
-
-.tag {
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-top: 4px;
-  padding: 2px 8px;
-  background: #eee;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  color: #555;
-}
-
-/* 🌙 Dark Mode */
-body.dark .post-card {
-  background: #1a1a1a;
-  border-color: #333;
-}
-
-body.dark .post-card h3 {
-  color: #fff;
-}
-
-body.dark .post-card .excerpt {
-  color: #ccc;
-}
-
-body.dark .meta {
-  color: #aaa;
-}
-
-body.dark .tag {
-  background: #333;
-  color: #bbb;
-}
-
-
-/* 🌗 Optional: start in dark mode if OS prefers it */
-@media (prefers-color-scheme: dark) {
-  body:not(.light):not(.dark) {
-    background: #111;
-    color: #f0f0f0;
-  }
+body.dark #searchResults {
+  background: #222;
+  color: #eee;
+  border-color: #444;
 }
