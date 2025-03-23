@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Load stylesheet relative to site -->
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+  <meta name="author" content="skelleng">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+<body class="{% if site.dark_mode %}dark{% endif %}">
 
-<body>
   {% include nav.html %}
 
-  <main>
+  <main class="content">
     {{ content }}
   </main>
 
-  {% include footer.html %}
+  <footer class="footer">
+    <p>&copy; {{ site.time | date: "%Y" }} LifeStack. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
