@@ -1,0 +1,72 @@
+---
+layout: default
+title: LifeStack – A Framework for Health & Wealth
+permalink: /
+---
+
+{% include nav.html %}
+
+<main class="content">
+  <h1>Welcome to LifeStack</h1>
+  <p>A modular framework for optimizing your mind, body, and money. Focused on <strong>Health</strong> and <strong>Wealth</strong> in the modern age.</p>
+
+  <div id="tag-filters" style="margin-bottom: 1.5rem;">
+    <strong>Filter by tag:</strong>
+    <button class="tag-filter" data-tag="all">All</button>
+    <button class="tag-filter" data-tag="health">Health</button>
+    <button class="tag-filter" data-tag="wealth">Wealth</button>
+    <button class="tag-filter" data-tag="productivity">Productivity</button>
+    <button class="tag-filter" data-tag="crypto">Crypto</button>
+  </div>
+
+  <div class="post-grid" id="postGrid">
+    {% assign posts = site.posts | sort: 'date' | reverse %}
+    {% for post in posts %}
+      <div class="post-card" data-tags="{{ post.tags | join: ' ' }}">
+        <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <div class="meta">
+          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="readtime">
+            {% assign words = post.content | number_of_words %}
+            {% assign minutes = words | divided_by:200 | plus:1 %}
+            ~{{ minutes }} min read
+          </span>
+        </div>
+        {% if post.tags %}
+        <div class="tags">
+          {% for tag in post.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll('.tag-filter');
+  const cards = document.querySelectorAll('.post-card');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tag = button.dataset.tag;
+
+      cards.forEach(card => {
+        const tags = card.dataset.tags.split(' ');
+        if (tag === 'all' || tags.includes(tag)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+
+{% include footer.html %}
+

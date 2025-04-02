@@ -1,23 +1,18 @@
-<nav style="width: 100%; padding: 1rem 2rem; min-height: 60px; box-sizing: border-box; background: #f9f9f9; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; position: sticky; top: 0; z-index: 1000;">
-  <div style="font-weight: bold; font-size: 1.2rem;">
-    <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333;">LifeStack</a>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="{{ '/' | relative_url }}" class="logo">LifeStack</a>
   </div>
 
-  <div style="display: flex; align-items: center; gap: 1.25rem; flex-grow: 1; justify-content: center;">
-    <a href="{{ '/cook/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/cook/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/cook/' %}bold{% else %}normal{% endif %};">Cook</a>
-    <a href="{{ '/clean/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/clean/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/clean/' %}bold{% else %}normal{% endif %};">Clean</a>
-    <a href="{{ '/build/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/build/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/build/' %}bold{% else %}normal{% endif %};">Build</a>
+  <div class="nav-center">
+    <a href="{{ '/health/' | relative_url }}">Health</a>
+    <a href="{{ '/wealth/' | relative_url }}">Wealth</a>
   </div>
 
-  <div style="display: flex; align-items: center; gap: 1rem;">
-    <input type="text" id="searchBox" placeholder="Search…" style="padding: 0.25rem 0.5rem; font-size: 14px; border: 1px solid #ccc; border-radius: 3px;">
-    <button onclick="toggleTheme()" id="themeToggle" style="border: none; background: none; color: #555; cursor: pointer;">🌓</button>
-    <a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: {% if page.url contains '/about/' %}black{% else %}#555{% endif %}; font-weight: {% if page.url contains '/about/' %}bold{% else %}normal{% endif %};">About</a>
+  <div class="nav-right">
+    <input type="text" id="searchBox" placeholder="Search…">
+    <button onclick="toggleTheme()" id="themeToggle">🌓</button>
   </div>
 </nav>
-
-<!-- Search Results Dropdown -->
-<div id="searchResults" style="position: absolute; background: #fff; color: #000; font-size: 14px; padding: 0.5rem 1rem; display: none; border: 1px solid #ccc; border-radius: 4px; max-width: 300px; margin-left: auto; margin-right: 2rem; z-index: 1001;"></div>
 
 <script>
   const toggleTheme = () => {
@@ -33,29 +28,5 @@
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) document.body.classList.add('dark');
   }
-
-  const searchBox = document.getElementById("searchBox");
-  const results = document.getElementById("searchResults");
-  let posts = [];
-
-  async function fetchPosts() {
-    const res = await fetch('{{ "/search.json" | relative_url }}');
-    posts = await res.json();
-  }
-
-  fetchPosts();
-
-  searchBox.addEventListener("input", function () {
-    const query = this.value.toLowerCase();
-    if (query.length < 2) {
-      results.style.display = "none";
-      return;
-    }
-
-    const matches = posts.filter(post => post.title.toLowerCase().includes(query));
-    results.innerHTML = matches.map(post =>
-      `<div><a href="${post.url}" style="color:#0077cc;">${post.title}</a></div>`
-    ).join('');
-    results.style.display = matches.length ? "block" : "none";
-  });
 </script>
+
