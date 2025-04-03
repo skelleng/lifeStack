@@ -230,3 +230,68 @@ body.dark footer {
 body.dark .footer-links a {
   color: #bbb;
 }
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.hero .intro {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Tag Filters */
+#tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.tag-filter {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #f7f7f7;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.tag-filter.active,
+.tag-filter:hover {
+  background: #222;
+  color: #fff;
+}
+
+body.dark .tag-filter {
+  background: #222;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark .tag-filter.active,
+body.dark .tag-filter:hover {
+  background: #fff;
+  color: #111;
+}
+
