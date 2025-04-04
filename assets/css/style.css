@@ -1,6 +1,5 @@
-/* ====================
-   RESET + BASE TYPOGRAPHY
-==================== */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,35 +8,12 @@
 
 html, body {
   height: 100%;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  background: #fff;
-  color: #222;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #111;
 }
 
-h1, h2, h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin-bottom: 0.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ====================
-   NAVBAR
-==================== */
+/* Navbar base */
 .navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -49,41 +25,37 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
 }
 
-.nav-left, .nav-right {
+/* Navbar layout */
+.nav-left, .nav-center, .nav-right {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .nav-center {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
   flex-grow: 1;
+  justify-content: center;
 }
 
-.logo {
+/* Navbar links */
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+}
+.navbar a.active {
+  color: black;
   font-weight: bold;
-  font-size: 1.2rem;
 }
 
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
+/* Search + toggle */
 #searchBox {
   padding: 0.25rem 0.5rem;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-
 #themeToggle {
   background: none;
   border: none;
@@ -92,224 +64,146 @@ a:hover {
   color: #555;
 }
 
-/* Hamburger Nav Mobile */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-center {
-    display: none;
-    flex-direction: column;
-    background: #f9f9f9;
-    width: 100%;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-center.open {
-    display: flex;
-  }
-
-  body.dark .nav-center {
-    background: #1a1a1a;
-    border-color: #444;
-  }
+/* Tag Filters */
+.tag-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.tag-button {
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.tag-button:hover {
+  background: #eee;
+}
+.tag-button.active {
+  background: #0077cc;
+  color: white;
+  border-color: #0077cc;
 }
 
-/* ====================
-   HERO SECTION
-==================== */
-.hero {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.tagline {
-  font-size: 1.25rem;
-  color: #666;
-}
-
-.intro {
-  max-width: 600px;
-  margin: 0.5rem auto 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* ====================
-   PILLAR CARDS (Home + Pages)
-==================== */
-.pillar-previews,
-.pillar-page {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Pillar Previews */
+.pillar-previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .pillar-card {
   background: #fff;
-  border-radius: 12px;
-  padding: 1.75rem;
-  border: 1px solid #eee;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  transition: all 0.2s ease;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid transparent;
+  position: relative;
+  width: 300px;
+  max-width: 90%;
+  text-align: left;
 }
 
 .pillar-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .pillar-card h2 {
-  margin: 0.5rem 0;
-  font-size: 1.4rem;
+  font-family: "Georgia", serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #222;
 }
-
 .pillar-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
   color: #444;
 }
-
-.pillar-card ul {
-  padding-left: 1rem;
-  list-style: disc;
-}
-
-.pillar-card li {
-  font-size: 0.95rem;
-  margin-bottom: 0.4rem;
-}
-
 .pillar-icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.pillar-card:hover .pillar-icon {
+  transform: scale(1.2) rotate(3deg);
 }
 
-/* Accent Border */
-.pillar-card.learn { border-left: 4px solid #0077cc; }
-.pillar-card.tools { border-left: 4px solid #2e8b57; }
-.pillar-card.stacks { border-left: 4px solid #e67300; }
-
-/* ====================
-   POST GRID + CARDS
-==================== */
-.post-grid {
-  padding: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+/* Theme Colors */
+.pillar-card.learn {
+  border-left-color: #0077cc;
+  background: #f0f8ff;
+}
+.pillar-card.tools {
+  border-left-color: #2e8b57;
+  background: #f6fff8;
+}
+.pillar-card.stacks {
+  border-left-color: #e67300;
+  background: #fffaf0;
 }
 
-.post-grid h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.post-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  transition: all 0.2s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.post-card h3 {
-  margin-top: 0;
-  font-size: 1.25rem;
-}
-
-.post-card .excerpt {
-  color: #444;
-  margin: 0.75rem 0;
-}
-
-.meta {
-  font-size: 0.8rem;
-  color: #888;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* ====================
-   FOOTER
-==================== */
-.footer {
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #888;
-  border-top: 1px solid #eee;
-  margin-top: 4rem;
-}
-
-.footer-links a {
-  margin: 0 0.75rem;
-  color: #666;
-}
-
-/* ====================
-   DARK MODE
-==================== */
+/* Dark mode */
 body.dark {
-  background-color: #111;
-  color: #eee;
-}
-
-body.dark a {
-  color: inherit;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 body.dark .navbar {
   background-color: #1a1a1a;
-  border-color: #333;
+  border-color: #444;
 }
-
-body.dark .navbar a,
-body.dark .logo {
+body.dark .navbar a {
   color: #ccc;
 }
-
+body.dark .navbar a:hover {
+  color: #66ccff;
+}
 body.dark #searchBox {
-  background-color: #222;
-  color: #eee;
+  background-color: #111;
+  color: #f0f0f0;
   border: 1px solid #555;
 }
-
 body.dark #themeToggle {
-  color: #eee;
-}
-
-body.dark .post-card,
-body.dark .pillar-card {
-  background: #1a1a1a;
-  border-color: #333;
-}
-
-body.dark .post-card h3,
-body.dark .post-card .excerpt,
-body.dark .meta,
-body.dark .pillar-card p,
-body.dark .pillar-card li {
   color: #ccc;
 }
-
-body.dark .footer {
+body.dark .tag-button {
+  background: #222;
   border-color: #444;
-  color: #aaa;
+  color: #ccc;
+}
+body.dark .tag-button.active {
+  background: #66ccff;
+  color: #000;
+}
+body.dark .pillar-card {
+  background: #1a1a1a;
+  color: #ddd;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.03);
+}
+body.dark .pillar-card.learn {
+  background: #0e1b2b;
+  border-left-color: #66ccff;
+}
+body.dark .pillar-card.tools {
+  background: #10291f;
+  border-left-color: #77ddaa;
+}
+body.dark .pillar-card.stacks {
+  background: #2b1d10;
+  border-left-color: #ffaa55;
+}
+body.dark .pillar-card h2 {
+  color: #eee;
+}
+body.dark .pillar-card p {
+  color: #ccc;
 }
