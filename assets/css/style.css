@@ -274,3 +274,41 @@ body.dark .footer {
   border-color: #444;
   color: #aaa;
 }
+/* Hamburger & Mobile Nav */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    background: #f9f9f9;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-center.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  body.dark .nav-center {
+    background: #1a1a1a;
+    border-color: #333;
+  }
+}
+
