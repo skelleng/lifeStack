@@ -1,4 +1,6 @@
-/* Base Reset */
+/* ====================
+   BASE RESET & TYPOGRAPHY
+==================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +9,21 @@
 
 html, body {
   height: 100%;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   line-height: 1.7;
-  background: #fff;
+  background-color: #fff;
   color: #222;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 a {
@@ -24,7 +35,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navbar */
+/* ====================
+   NAVBAR
+==================== */
 .navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -54,7 +67,24 @@ a:hover {
   font-size: 1.2rem;
 }
 
-/* Hero */
+#searchBox {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* ====================
+   HERO SECTION
+==================== */
 .hero {
   text-align: center;
   padding: 3rem 1rem 2rem;
@@ -71,39 +101,101 @@ a:hover {
 }
 
 .intro {
-  margin-top: 0.5rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.5rem auto 0;
+  font-size: 1rem;
+  color: #444;
 }
 
-/* Pillars Section */
-.pillars {
+/* ====================
+   PILLAR PREVIEW BLOCKS
+==================== */
+.pillar-previews {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: 960px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.pillar {
-  background: #fafafa;
-  padding: 1.5rem;
-  border-radius: 10px;
+.pillar-block {
+  background: #fdfdfd;
   border: 1px solid #eee;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-  text-align: center;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.pillar a {
-  font-size: 1.25rem;
-  display: block;
+.pillar-block h2 {
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
-/* Footer */
+.pillar-block p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-block ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.pillar-block li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ====================
+   POST GRID + CARDS
+==================== */
+.post-grid {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.post-grid h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.post-card .excerpt {
+  color: #444;
+  margin: 0.75rem 0;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ====================
+   FOOTER
+==================== */
 .footer {
   padding: 2rem;
   text-align: center;
@@ -118,24 +210,64 @@ a:hover {
   color: #666;
 }
 
-/* Dark Mode */
+/* ====================
+   DARK MODE
+==================== */
 body.dark {
-  background: #111;
+  background-color: #111;
   color: #eee;
-}
-
-body.dark .navbar {
-  background: #1a1a1a;
-  border-color: #333;
 }
 
 body.dark a {
   color: #66ccff;
 }
 
-body.dark .pillar {
+body.dark a:hover {
+  color: #88ddff;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #fff;
+}
+
+body.dark .navbar {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+body.dark .navbar a {
+  color: #ccc;
+}
+
+body.dark #searchBox {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark #themeToggle {
+  color: #eee;
+}
+
+body.dark .post-card {
   background: #1a1a1a;
   border-color: #333;
+}
+
+body.dark .post-card h3,
+body.dark .post-card .excerpt,
+body.dark .meta {
+  color: #ccc;
+}
+
+body.dark .pillar-block {
+  background: #1a1a1a;
+  border-color: #333;
+}
+
+body.dark .pillar-block p,
+body.dark .pillar-block li {
+  color: #ccc;
 }
 
 body.dark .footer {
