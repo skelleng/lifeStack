@@ -4,14 +4,61 @@ title: LifeStack – A Modular Framework for Living Well
 permalink: /
 ---
 
+<!-- Hero Section -->
 <section class="hero">
   <h1>💡 LifeStack</h1>
   <p class="tagline">Build a resilient, intentional life — one stack at a time.</p>
-  <p class="intro">Explore curated systems, tools, and knowledge across modern wellness, productivity, and financial clarity.</p>
+  <p class="intro">Explore curated systems, tools, and knowledge across wellness, productivity, and financial clarity.</p>
 </section>
 
-<section class="pillars">
-  <div class="pillar"><a href="{{ '/learn/' | relative_url }}">📘 Learn</a><p>Articles, essays, and guides across health, wealth, mindset, and clarity.</p></div>
-  <div class="pillar"><a href="{{ '/tools/' | relative_url }}">🛠 Tools</a><p>Spreadsheets, calculators, and trackers to simplify your systems.</p></div>
-  <div class="pillar"><a href="{{ '/stacks/' | relative_url }}">📦 Stacks</a><p>Ready-made life frameworks you can plug into your own journey.</p></div>
+<!-- Pillar Previews -->
+<section class="pillar-previews">
+
+  <!-- Learn Preview -->
+  <div class="pillar-block">
+    <h2><a href="{{ '/learn/' | relative_url }}">📘 Learn</a></h2>
+    <p>Dive into articles and insights across mindset, health, and clarity.</p>
+    <ul>
+      {% assign learn_posts = site.posts | where_exp: "post", "post.tags contains 'learn'" | sort: "date" | reverse | slice: 0, 3 %}
+      {% for post in learn_posts %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Tools Preview -->
+  <div class="pillar-block">
+    <h2><a href="{{ '/tools/' | relative_url }}">🛠 Tools</a></h2>
+    <p>Use practical templates and trackers to make smarter decisions.</p>
+    <ul>
+      <li><a href="{{ '/tools/' | relative_url }}">Habit Tracker (Google Sheet)</a></li>
+      <li><a href="{{ '/tools/' | relative_url }}">Spending Audit Tool</a></li>
+    </ul>
+  </div>
+
+  <!-- Stacks Preview -->
+  <div class="pillar-block">
+    <h2><a href="{{ '/stacks/' | relative_url }}">📦 Stacks</a></h2>
+    <p>Life systems you can plug in: routines, resets, and frameworks.</p>
+    <ul>
+      <li><a href="{{ '/stacks/' | relative_url }}">Digital Detox Stack</a></li>
+      <li><a href="{{ '/stacks/' | relative_url }}">Financial Clarity Stack</a></li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Latest Posts Grid -->
+<section class="post-grid">
+  <h2>📝 Latest Posts</h2>
+  {% assign posts = site.posts | sort: 'date' | reverse %}
+  {% for post in posts limit:6 %}
+    <div class="post-card">
+      <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <div class="meta">
+        <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+      </div>
+    </div>
+  {% endfor %}
 </section>
