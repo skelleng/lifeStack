@@ -1,6 +1,4 @@
-/* ====================
-   BASE RESET & TYPOGRAPHY
-==================== */
+/* Reset & Base Typography */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +15,7 @@ html, body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin-bottom: 0.75rem;
 }
@@ -26,8 +24,14 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Pillar Colors */
+a.learn { color: #0077cc; }         /* blue */
+a.tools { color: #2e8b57; }         /* green */
+a.stacks { color: #e67300; }        /* orange */
+
+/* Default Link Styling */
 a {
-  color: #0077cc;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -49,17 +53,52 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
-.nav-left, .nav-center, .nav-right {
+.nav-left, .nav-right {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .nav-center {
-  flex-grow: 1;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
   justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    background: #f9f9f9;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-center.open {
+    display: flex;
+  }
+
+  body.dark .nav-center {
+    background: #1a1a1a;
+    border-color: #444;
+  }
 }
 
 .logo {
@@ -83,7 +122,7 @@ a:hover {
 }
 
 /* ====================
-   HERO SECTION
+   HERO
 ==================== */
 .hero {
   text-align: center;
@@ -108,7 +147,7 @@ a:hover {
 }
 
 /* ====================
-   PILLAR PREVIEW BLOCKS
+   PILLAR BLOCKS
 ==================== */
 .pillar-previews {
   display: grid;
@@ -127,28 +166,18 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.pillar-block h2 {
-  margin-bottom: 0.5rem;
-}
-
-.pillar-block p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
+.pillar-block h2 a.learn { color: #0077cc; }
+.pillar-block h2 a.tools { color: #2e8b57; }
+.pillar-block h2 a.stacks { color: #e67300; }
 
 .pillar-block ul {
   list-style: disc;
   padding-left: 1.25rem;
-}
-
-.pillar-block li {
-  margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
 
 /* ====================
-   POST GRID + CARDS
+   POST GRID
 ==================== */
 .post-grid {
   padding: 2rem;
@@ -219,15 +248,7 @@ body.dark {
 }
 
 body.dark a {
-  color: #66ccff;
-}
-
-body.dark a:hover {
-  color: #88ddff;
-}
-
-body.dark h1, body.dark h2, body.dark h3 {
-  color: #fff;
+  color: inherit;
 }
 
 body.dark .navbar {
@@ -235,7 +256,8 @@ body.dark .navbar {
   border-color: #333;
 }
 
-body.dark .navbar a {
+body.dark .navbar a,
+body.dark .logo {
   color: #ccc;
 }
 
@@ -274,41 +296,3 @@ body.dark .footer {
   border-color: #444;
   color: #aaa;
 }
-/* Hamburger & Mobile Nav */
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-center {
-    display: none;
-    flex-direction: column;
-    background: #f9f9f9;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-center.open {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-  }
-
-  body.dark .nav-center {
-    background: #1a1a1a;
-    border-color: #333;
-  }
-}
-
