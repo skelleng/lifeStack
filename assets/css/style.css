@@ -1,4 +1,6 @@
-/* Reset & Base Typography */
+/* ====================
+   RESET + BASE TYPOGRAPHY
+==================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +9,10 @@
 
 html, body {
   height: 100%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 18px;
   line-height: 1.7;
-  background-color: #fff;
+  background: #fff;
   color: #222;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -24,12 +26,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Pillar Colors */
-a.learn { color: #0077cc; }         /* blue */
-a.tools { color: #2e8b57; }         /* green */
-a.stacks { color: #e67300; }        /* orange */
-
-/* Default Link Styling */
 a {
   color: inherit;
   text-decoration: none;
@@ -70,13 +66,33 @@ a:hover {
   flex-grow: 1;
 }
 
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Mobile Nav */
+#searchBox {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Hamburger Nav Mobile */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -101,28 +117,8 @@ a:hover {
   }
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-#searchBox {
-  padding: 0.25rem 0.5rem;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-#themeToggle {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: #555;
-}
-
 /* ====================
-   HERO
+   HERO SECTION
 ==================== */
 .hero {
   text-align: center;
@@ -147,9 +143,10 @@ a:hover {
 }
 
 /* ====================
-   PILLAR BLOCKS
+   PILLAR CARDS (Home + Pages)
 ==================== */
-.pillar-previews {
+.pillar-previews,
+.pillar-page {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -158,26 +155,53 @@ a:hover {
   margin: 0 auto;
 }
 
-.pillar-block {
-  background: #fdfdfd;
+.pillar-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
   border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
 }
 
-.pillar-block h2 a.learn { color: #0077cc; }
-.pillar-block h2 a.tools { color: #2e8b57; }
-.pillar-block h2 a.stacks { color: #e67300; }
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
 
-.pillar-block ul {
-  list-style: disc;
-  padding-left: 1.25rem;
+.pillar-card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.pillar-card p {
   font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #444;
 }
+
+.pillar-card ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.pillar-card li {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.pillar-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Accent Border */
+.pillar-card.learn { border-left: 4px solid #0077cc; }
+.pillar-card.tools { border-left: 4px solid #2e8b57; }
+.pillar-card.stacks { border-left: 4px solid #e67300; }
 
 /* ====================
-   POST GRID
+   POST GRID + CARDS
 ==================== */
 .post-grid {
   padding: 2rem;
@@ -271,24 +295,17 @@ body.dark #themeToggle {
   color: #eee;
 }
 
-body.dark .post-card {
+body.dark .post-card,
+body.dark .pillar-card {
   background: #1a1a1a;
   border-color: #333;
 }
 
 body.dark .post-card h3,
 body.dark .post-card .excerpt,
-body.dark .meta {
-  color: #ccc;
-}
-
-body.dark .pillar-block {
-  background: #1a1a1a;
-  border-color: #333;
-}
-
-body.dark .pillar-block p,
-body.dark .pillar-block li {
+body.dark .meta,
+body.dark .pillar-card p,
+body.dark .pillar-card li {
   color: #ccc;
 }
 
