@@ -1,68 +1,17 @@
 ---
 layout: default
-title: LifeStack – A Framework for Health & Wealth
+title: LifeStack – A Modular Framework for Living Well
 permalink: /
 ---
 
-<!-- Hero Section -->
 <section class="hero">
   <h1>💡 LifeStack</h1>
-  <p class="tagline">Build clarity, health, and wealth — one stack at a time.</p>
-  <p class="intro">Explore guides, tools, and systems for optimizing your life through modern wellness and financial intelligence.</p>
+  <p class="tagline">Build a resilient, intentional life — one stack at a time.</p>
+  <p class="intro">Explore curated systems, tools, and knowledge across modern wellness, productivity, and financial clarity.</p>
 </section>
 
-<!-- Tag Filters -->
-<section id="tag-filters">
-  <strong>Filter by:</strong>
-  <button class="tag-filter" data-tag="all">All</button>
-  <button class="tag-filter" data-tag="health">Health</button>
-  <button class="tag-filter" data-tag="wealth">Wealth</button>
-  <button class="tag-filter" data-tag="productivity">Productivity</button>
-  <button class="tag-filter" data-tag="crypto">Crypto</button>
+<section class="pillars">
+  <div class="pillar"><a href="{{ '/learn/' | relative_url }}">📘 Learn</a><p>Articles, essays, and guides across health, wealth, mindset, and clarity.</p></div>
+  <div class="pillar"><a href="{{ '/tools/' | relative_url }}">🛠 Tools</a><p>Spreadsheets, calculators, and trackers to simplify your systems.</p></div>
+  <div class="pillar"><a href="{{ '/stacks/' | relative_url }}">📦 Stacks</a><p>Ready-made life frameworks you can plug into your own journey.</p></div>
 </section>
-
-<!-- Post Grid -->
-<section class="post-grid" id="postGrid">
-  {% assign posts = site.posts | sort: 'date' | reverse %}
-  {% for post in posts %}
-    <div class="post-card" data-tags="{{ post.tags | join: ' ' }}">
-      <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
-      <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      <div class="meta">
-        <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
-        <span class="readtime">
-          {% assign words = post.content | number_of_words %}
-          {% assign minutes = words | divided_by:200 | plus:1 %}
-          ~{{ minutes }} min read
-        </span>
-      </div>
-      {% if post.tags %}
-        <div class="tags">
-          {% for tag in post.tags %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  {% endfor %}
-</section>
-
-<!-- Tag Filter Script -->
-<script>
-  const buttons = document.querySelectorAll('.tag-filter');
-  const cards = document.querySelectorAll('.post-card');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const tag = button.dataset.tag;
-
-      cards.forEach(card => {
-        const tags = card.dataset.tags.split(' ');
-        card.style.display = (tag === 'all' || tags.includes(tag)) ? 'block' : 'none';
-      });
-
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    });
-  });
-</script>
