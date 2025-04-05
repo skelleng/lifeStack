@@ -1,10 +1,10 @@
 ---
+layout: post
 title: "Why I'm Not Rushing to Buy Property in Bali (And Maybe You Shouldn’t Either)"
+date: 2025-04-07
 description: "Bali leaseholds might seem like a shortcut to tropical freedom—but they’re not the asset class most foreigners think they are. Here’s a smarter take on foreign real estate investing."
 author: skelleng
-date: 2025-04-07
 tags: [bali, real estate, leasehold, expat life, digital nomad, investment, international property, wealth, indonesia, land rights, equity]
-layout: post
 excerpt_separator: <!--more-->
 cover: /assets/images/bali-property-cover.jpg
 ---
