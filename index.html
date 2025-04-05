@@ -5,18 +5,19 @@ permalink: /
 ---
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" style="text-align:center; padding: 2rem 1rem;">
   <h1>💡 LifeStack</h1>
-  <p class="tagline">Build a resilient, intentional life — one stack at a time.</p>
-  <p class="intro">Explore curated systems, tools, and knowledge across wellness, productivity, and financial clarity.</p>
+  <p class="tagline" style="font-size: 1.25rem; color: #555;">Build a resilient, intentional life — one stack at a time.</p>
+  <p class="intro" style="margin-top: 1rem; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Explore curated systems, tools, and knowledge across wellness, productivity, and financial clarity.</p>
 </section>
 
 <!-- Pillar Previews -->
 <section class="pillar-previews">
 
-  <!-- Learn Preview -->
-  <div class="pillar-block">
-    <h2><a href="{{ '/learn/' | relative_url }}">📘 Learn</a></h2>
+  <!-- Learn Card -->
+  <div class="pillar-card learn">
+    <span class="pillar-icon">📘</span>
+    <h2><a href="{{ '/learn/' | relative_url }}">Learn</a></h2>
     <p>Dive into articles and insights across mindset, health, and clarity.</p>
     <ul>
       {% assign learn_posts = site.posts | where_exp: "post", "post.tags contains 'learn'" | sort: "date" | reverse | slice: 0, 3 %}
@@ -26,9 +27,10 @@ permalink: /
     </ul>
   </div>
 
-  <!-- Tools Preview -->
-  <div class="pillar-block">
-    <h2><a href="{{ '/tools/' | relative_url }}">🛠 Tools</a></h2>
+  <!-- Tools Card -->
+  <div class="pillar-card tools">
+    <span class="pillar-icon">🛠</span>
+    <h2><a href="{{ '/tools/' | relative_url }}">Tools</a></h2>
     <p>Use practical templates and trackers to make smarter decisions.</p>
     <ul>
       <li><a href="{{ '/tools/' | relative_url }}">Habit Tracker (Google Sheet)</a></li>
@@ -36,9 +38,10 @@ permalink: /
     </ul>
   </div>
 
-  <!-- Stacks Preview -->
-  <div class="pillar-block">
-    <h2><a href="{{ '/stacks/' | relative_url }}">📦 Stacks</a></h2>
+  <!-- Stacks Card -->
+  <div class="pillar-card stacks">
+    <span class="pillar-icon">📦</span>
+    <h2><a href="{{ '/stacks/' | relative_url }}">Stacks</a></h2>
     <p>Life systems you can plug in: routines, resets, and frameworks.</p>
     <ul>
       <li><a href="{{ '/stacks/' | relative_url }}">Digital Detox Stack</a></li>
@@ -49,16 +52,18 @@ permalink: /
 </section>
 
 <!-- Latest Posts Grid -->
-<section class="post-grid">
-  <h2>📝 Latest Posts</h2>
-  {% assign posts = site.posts | sort: 'date' | reverse %}
-  {% for post in posts limit:6 %}
-    <div class="post-card">
-      <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
-      <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      <div class="meta">
-        <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+<section style="padding: 2rem;">
+  <h2 style="text-align: center; margin-bottom: 2rem;">📝 Latest Posts</h2>
+  <div class="post-grid">
+    {% assign posts = site.posts | sort: 'date' | reverse %}
+    {% for post in posts limit:6 %}
+      <div class="post-card">
+        <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <div class="meta">
+          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </section>
