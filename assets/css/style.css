@@ -157,6 +157,54 @@ html, body {
   border-color: #0077cc;
 }
 
+/* Post Cards */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.post-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.post-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.post-card .excerpt {
+  color: #444;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+.post-card .meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+.readtime {
+  margin-left: 0.5rem;
+}
+.tags {
+  margin-top: 0.5rem;
+}
+.tag {
+  background: #eee;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
 /* Dark Mode */
 body.dark {
   background-color: #121212;
@@ -201,6 +249,13 @@ body.dark .pillar-card.stacks {
 }
 body.dark .pillar-card h2 { color: #eee; }
 body.dark .pillar-card p { color: #ccc; }
+body.dark .post-card {
+  background: #1f1f1f;
+  color: #eee;
+}
+body.dark .post-card .excerpt { color: #bbb; }
+body.dark .post-card .meta { color: #aaa; }
+body.dark .tag { background: #444; color: #eee; }
 
 /* Responsive */
 @media (max-width: 768px) {
