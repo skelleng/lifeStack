@@ -3,39 +3,41 @@
     <a href="{{ '/' | relative_url }}">LifeStack</a>
   </div>
 
-  <!-- Hamburger Icon -->
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- Center Nav for Desktop -->
   <div class="nav-center">
-    <a href="{{ '/learn/' | relative_url }}" class="{% if page.url contains '/learn/' %}active{% endif %}">Learn</a>
-    <a href="{{ '/tools/' | relative_url }}" class="{% if page.url contains '/tools/' %}active{% endif %}">Tools</a>
-    <a href="{{ '/stacks/' | relative_url }}" class="{% if page.url contains '/stacks/' %}active{% endif %}">Stacks</a>
+    <a href="{{ '/learn/' | relative_url }}">Learn</a>
+    <a href="{{ '/tools/' | relative_url }}">Tools</a>
+    <a href="{{ '/stacks/' | relative_url }}">Stacks</a>
   </div>
 
-  <!-- Right Side -->
   <div class="nav-right">
     <input type="text" id="searchBox" placeholder="Search…" />
     <button onclick="toggleTheme()" id="themeToggle">🌓</button>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </nav>
 
-<!-- Mobile Dropdown -->
-<div class="mobile-nav" id="mobileNav">
+<!-- Mobile Navigation -->
+<div id="mobileNav" class="mobile-nav" style="display: none;">
   <a href="{{ '/learn/' | relative_url }}">Learn</a>
   <a href="{{ '/tools/' | relative_url }}">Tools</a>
   <a href="{{ '/stacks/' | relative_url }}">Stacks</a>
+  <a href="{{ '/about/' | relative_url }}">About</a>
+  <a href="{{ '/contact/' | relative_url }}">Contact</a>
 </div>
 
-<!-- Search Results Dropdown -->
+<!-- Search Results (Optional dropdown) -->
 <div id="searchResults" style="position: absolute; background: #fff; color: #000; font-size: 14px; padding: 0.5rem 1rem; display: none; border: 1px solid #ccc; border-radius: 4px; max-width: 300px; margin-left: auto; margin-right: 2rem; z-index: 1001;"></div>
 
-<!-- Script -->
 <script>
+  function toggleMenu() {
+    const nav = document.getElementById("mobileNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  }
+
   function toggleTheme() {
     const body = document.body;
     const isDark = body.classList.toggle('dark');
@@ -50,13 +52,6 @@
     if (prefersDark) document.body.classList.add('dark');
   }
 
-  // Hamburger toggle
-  function toggleMenu() {
-    const nav = document.getElementById("mobileNav");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-  }
-
-  // Search filtering
   const searchBox = document.getElementById("searchBox");
   const results = document.getElementById("searchResults");
   let posts = [];
@@ -65,6 +60,7 @@
     const res = await fetch('{{ "/search.json" | relative_url }}');
     posts = await res.json();
   }
+
   fetchPosts();
 
   searchBox.addEventListener("input", function () {
