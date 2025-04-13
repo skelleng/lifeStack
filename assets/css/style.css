@@ -269,3 +269,53 @@ body.dark .tag { background: #444; color: #eee; }
     display: flex;
   }
 }
+
+/* Post Content Styling */
+.post-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+}
+
+.post-content h1, .post-content h2, .post-content h3 {
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.post-content p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #0077cc;
+  color: #555;
+}
+
+.post-content ul, .post-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-content a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
