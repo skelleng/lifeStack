@@ -9,9 +9,13 @@
 <body>
   {% include nav.html %}
   <main class="container">
-    <article class="post-content">
+    {% if page.layout == "post" %}
+      <article class="post-content">
+        {{ content }}
+      </article>
+    {% else %}
       {{ content }}
-    </article>
+    {% endif %}
   </main>
   {% include footer.html %}
 </body>
