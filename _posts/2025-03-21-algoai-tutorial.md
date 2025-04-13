@@ -6,7 +6,6 @@ date: 2025-03-21
 tags:
   [Algo.ai, crypto, cryptocurrency, crypto trading, crypto trading bot, automated trading, crypto exchange, Binance, KuCoin, Vybit, USDT, crypto wallet, crypto mining, crypto news, crypto prices, best crypto to buy now, cryptocurrency exchange]
 layout: post
-collection: build
 ---
 
 # 🚀 Crypto Trading Bot Tutorial: How to Use Algo.ai with Binance or KuCoin
