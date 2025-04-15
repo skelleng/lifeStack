@@ -136,9 +136,9 @@ html, body {
 .pillar-card:hover .pillar-icon {
   transform: scale(1.2) rotate(3deg);
 }
-.pillar-card.learn { background: #f0f8ff; border-left-color: #0077cc; }
-.pillar-card.tools { background: #f6fff8; border-left-color: #2e8b57; }
-.pillar-card.stacks { background: #fffaf0; border-left-color: #e67300; }
+.pillar-card.health { background: #f9fff5; border-left-color: #2e8b57; }
+.pillar-card.wealth { background: #fff7eb; border-left-color: #e67300; }
+.pillar-card.meta { background: #f0f8ff; border-left-color: #0077cc; }
 
 /* Tags Filter */
 .tag-filters {
