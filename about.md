@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "LifeStack – Curating Pillars of Intentional Living"
 description: "LifeStack helps you navigate the essentials of a well-lived life: cultivating health, building wealth, and exploring deeper purpose. Discover frameworks, insights, and tools for every stage of the journey."
 keywords: ["intentional living", "health", "wealth", "purpose", "LifeStack", "personal development", "financial fitness", "wellness", "emotional clarity", "digital minimalism", "holistic living"]
