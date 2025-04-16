@@ -37,8 +37,6 @@ permalink: /about/
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-# 🧬 LifeStack
-
 **Curating the pillars of intentional living.**
 
 LifeStack offers a framework for exploring what matters most in life, with a focus on building health, wealth, and purpose. Each pillar is designed to help you align your habits, goals, and values—leading to a more intentional, fulfilling existence.
