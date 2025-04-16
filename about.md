@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "LifeStack – A Modular Philosophy for Intentional Living"
-description: "Explore LifeStack: a holistic framework to nourish your body, clear your mind, and build systems that align with your values. Cook. Clean. Build."
-keywords: ["intentional living", "lifestyle design", "LifeStack", "cook clean build", "personal development", "financial fitness", "self-care", "emotional clarity", "digital minimalism", "modular living"]
+title: "LifeStack – Curating Pillars of Intentional Living"
+description: "LifeStack helps you navigate the essentials of a well-lived life: cultivating health, building wealth, and exploring deeper purpose. Discover frameworks, insights, and tools for every stage of the journey."
+keywords: ["intentional living", "health", "wealth", "purpose", "LifeStack", "personal development", "financial fitness", "wellness", "emotional clarity", "digital minimalism", "holistic living"]
 permalink: /about/
 ---
 
 <!-- SEO Meta Tags -->
 <meta name="author" content="skelleng">
-<meta property="og:title" content="LifeStack – A Modular Philosophy for Intentional Living" />
-<meta property="og:description" content="LifeStack is a framework for designing a meaningful life by balancing self-care, mental clarity, and intentional creation. Explore the layers: Cook. Clean. Build." />
+<meta property="og:title" content="LifeStack – Curating Pillars of Intentional Living" />
+<meta property="og:description" content="LifeStack helps you navigate the essentials of a well-lived life: cultivating health, building wealth, and exploring deeper purpose. Discover frameworks, insights, and tools for every stage of the journey." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://skelleng.github.io/lifeStack/" />
 <meta property="og:image" content="https://skelleng.github.io/lifeStack/assets/images/cover.jpg" />
 
 <!-- Optional Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="LifeStack – A Modular Philosophy for Intentional Living" />
-<meta name="twitter:description" content="Cook. Clean. Build. Discover the intentional lifestyle framework for the modern world." />
+<meta name="twitter:title" content="LifeStack – Curating Pillars of Intentional Living" />
+<meta name="twitter:description" content="LifeStack helps you navigate the essentials of a well-lived life: cultivating health, building wealth, and exploring deeper purpose. Discover frameworks, insights, and tools for every stage of the journey." />
 <meta name="twitter:image" content="https://skelleng.github.io/lifeStack/assets/images/cover.jpg" />
 
 <!-- Structured Data (JSON-LD) -->
@@ -26,7 +26,7 @@ permalink: /about/
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "LifeStack",
-  "description": "A modular lifestyle framework for modern living. Learn how to Cook, Clean, and Build with intention.",
+  "description": "A modular lifestyle framework for modern living. Learn how to cultivate health, build wealth, and discover deeper purpose with intention.",
   "url": "https://skelleng.github.io/lifeStack",
   "author": {
     "@type": "Person",
@@ -37,118 +37,67 @@ permalink: /about/
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-# 🧜️ LifeStack
+# 🧬 LifeStack
 
-**A modular philosophy for intentional living.**
+**Curating the pillars of intentional living.**
 
-LifeStack is a framework for exploring the **layers of life that make us whole**—how we nourish, cleanse, and build systems that align with our values. Inspired by the architecture of a technology stack, LifeStack invites readers to consciously structure their lives across three domains: **Cook**, **Clean**, and **Build**.
+LifeStack offers a framework for exploring what matters most in life, with a focus on building health, wealth, and purpose. Each pillar is designed to help you align your habits, goals, and values—leading to a more intentional, fulfilling existence.
 
-In a world where traditional roles are blurring and personal evolution is nonlinear, LifeStack encourages a modern, holistic lifestyle—where your habits, inner world, and creative output are all integrated into one intentional existence.
-
----
-
-## 🧬 Explore the LifeStack Layers
-
-- 🍳 [Cook](./cook/) — Nourish the body and mind  
-- 🧼 [Clean](./clean/) — Achieve clarity and emotional balance  
-- 🛠 [Build](./build/) — Create systems and shape the world  
+In today’s fast-paced, ever-changing world, LifeStack invites you to step back and think holistically. By curating proven frameworks, actionable insights, and practical tools, we help you create a roadmap for thriving in every aspect of life.
 
 ---
 
-## 🌐 Overview
+## 🏛 The Three Pillars of LifeStack
 
-**LifeStack** is a philosophy-driven publication that examines the **interconnected layers of modern living**—how daily rituals, inner work, and intentional creation come together to build a meaningful life. 
-
-Drawing inspiration from how technology stacks function—layered, modular, and interdependent—LifeStack offers a roadmap for **integrating personal well-being, mental clarity, and creative agency** into one unified, sustainable lifestyle.
-
----
-
-## 🔍 The Sections
-
-### 🍳 1. Cook — *Nourish the Body and Mind*
-
-This layer focuses on **preparation and self-care**—fueling physical and mental energy through conscious consumption and regenerative habits. It’s where strength, stamina, and emotional resilience begin.
-
-**Key Topics:**
-- Daily nutrition and energizing routines  
-- Recipes for mind-body clarity  
-- Movement and mindfulness integration  
-- Self-care frameworks for sustainable health  
+- 🏋️‍♂️ **[Health](./health/)** — Foundations of physical well-being, mental clarity, and emotional balance.  
+- 💰 **[Wealth](./wealth/)** — Strategies for financial resilience, smart investments, and resource management.  
+- 🧭 **[Purpose](./purpose/)** — Navigating the broader meaning of life, defining personal values, and pursuing lasting fulfillment.
 
 ---
 
-### 🧼 2. Clean — *Achieve Mental Clarity and Emotional Balance*
+## 🌍 The LifeStack Vision
 
-Clean is about **clearing space**—physically, mentally, emotionally, and digitally. It emphasizes healing, decluttering, and cultivating presence so you can hear your own inner signal over the noise.
+LifeStack isn’t just about tips and tricks; it’s about a paradigm shift in how we approach our daily lives. By thinking of life as a system—one that you can optimize, adapt, and improve over time—you become the architect of your own growth.
 
-**Key Topics:**
-- Minimalism and intentional design  
-- Emotional detox and inner work  
-- Digital hygiene and screen boundaries  
-- Meditation, journaling, and somatic presence  
+Our vision is to provide a framework that:
 
----
-
-### 🛠 3. Build — *Create Systems and Shape the World*
-
-Build is where **structure and purpose** meet action. It's the outward expression of a clear mind and nourished body—where you design your career, finances, relationships, and creative projects with intention.
-
-**Key Topics:**
-- Entrepreneurship and conscious leadership  
-- Personal finance and financial fitness  
-- Relationships, family systems, and community  
-- Tools for creation, innovation, and legacy-building  
-- Philosophy, governance, and collective impact  
-
-> 🧠 **Subtopic: Financial Fitness** lives within Build. Wealth is a system—built, not guessed. We explore budgeting, investing, crypto, and intentional earning to help you design financial freedom that serves your greater purpose.
+1. Integrates all areas of life into a cohesive whole.  
+2. Promotes clarity and confidence in your decision-making.  
+3. Inspires meaningful action, not just temporary fixes.
 
 ---
 
-## ✨ Ethos
+## 📖 What You’ll Find Here
 
-At its core, LifeStack believes that **life is modular**. Each layer—Cook, Clean, and Build—serves a distinct role, but together, they form a balanced whole. Just as a well-designed tech stack integrates databases, logic, and user interfaces, a well-lived life blends nourishment, clarity, and impact.
-
-We believe modern individuals must embody **both traditional and modern roles**:
-- To **nourish** their bodies and spirits  
-- To **clear** the noise that blocks truth  
-- To **build** systems that reflect their values  
-
-This isn’t self-help. It’s **system design for your life**.
+- **Curated Insights:** Articles, interviews, and case studies exploring timeless principles and modern strategies.  
+- **Tools & Templates:** Downloadable resources to track progress, improve productivity, and maintain focus.  
+- **Frameworks That Work:** Practical approaches that you can apply to your unique circumstances.
 
 ---
 
-## 🔥 Why LifeStack?
+## 💡 Why LifeStack?
 
-In a world of distraction and digital overload, LifeStack is your blueprint for **living deliberately**.
+In a digital age filled with noise, LifeStack is your compass. We help you focus on what matters, filter out the distractions, and build a life that’s truly aligned with your core values.
 
-We’re here for:
-1. Thinkers and doers seeking clarity  
-2. Creators and builders designing meaning  
-3. Seekers who believe inner peace and outer impact are not mutually exclusive  
-
-If you want to live with rhythm, ritual, and resonance—LifeStack is for you.
+Whether you’re just starting your journey or looking to refine your approach, LifeStack offers the guidance and structure to help you succeed.
 
 ---
 
-## 🤝 Get Involved
+## 🛠 How You Can Participate
 
-We believe in community-driven content and collective growth. You can:
+LifeStack thrives on community. Here’s how you can join the movement:
 
-- ✍️ **Submit articles** that align with the Cook, Clean, or Build ethos  
-- 💬 **Join discussions** with fellow readers and contributors  
-- 📨 **Subscribe to our newsletter** for reflections, curated links, and behind-the-scenes thoughts  
-
-> Want to collaborate? Reach out via [contact.md](./contact.md) or social.
+- **Contribute Content:** Share your own strategies, experiences, and insights with our growing audience.  
+- **Engage in Discussions:** Connect with like-minded individuals in our community forums and social platforms.  
+- **Explore Our Resources:** Make the most of our downloadable templates, guides, and curated collections.
 
 ---
 
-## ✅ Conclusion
+## 🚀 Start Your LifeStack Journey
 
-**LifeStack isn’t just a philosophy—it’s a toolkit for intentional living.**
+LifeStack is more than a website; it’s a guide to intentional living. By diving into the pillars of health, wealth, and purpose, you can begin a transformative journey—one that leads to a more meaningful, impactful life.
 
-By aligning your daily habits, emotional clarity, and creative output, you can build a life that is not only functional, but **fulfilling, grounded, and impactful**.
-
-Whether you're nourishing your body, clearing mental fog, or designing your future—LifeStack helps you **stack your life with meaning**.
+Join us as we explore the paths to a better you.
 
 <!-- Giscus Comment Integration -->
 <div id="giscus_thread"></div>
