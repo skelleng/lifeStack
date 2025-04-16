@@ -96,21 +96,3 @@ LifeStack thrives on community. Here’s how you can join the movement:
 LifeStack is more than a website; it’s a guide to intentional living. By diving into the pillars of health, wealth, and purpose, you can begin a transformative journey—one that leads to a more meaningful, impactful life.
 
 Join us as we explore the paths to a better you.
-
-<!-- Giscus Comment Integration -->
-<div id="giscus_thread"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="skelleng/lifeStack"
-        data-repo-id="YOUR_REPO_ID"
-        data-category="General"
-        data-category-id="YOUR_CATEGORY_ID"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
