@@ -1,14 +1,13 @@
 ---
-
 layout: post
 title: "Rushing the Future: The Illusion of AI Readiness"
 date: 2025-05-15
 description: "Many companies are racing into AI without considering whether it’s needed or sustainable. Here's a closer look at the hype, the hidden costs, and smarter alternatives."
 author: skelleng
-tags: \[AI, computing, tech trends, infrastructure, synthetic AI, hype cycles, innovation]
-excerpt\_separator: <!--more-->
+tags: [AI, computing, tech trends, infrastructure, synthetic AI, hype cycles, innovation]
+excerpt_separator: <!--more-->
 cover: /assets/images/ai-hype-cover.jpg
----------------------------------------
+---
 
 # 🤖 Rushing the Future: The Illusion of AI Readiness
 
